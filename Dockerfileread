@@ -1,0 +1,11 @@
+FROM python:3.9
+
+#instalando dependencias
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+#rodando a aplicação
+COPY dados.csv .
+CMD ["python","read.py"]
+
